@@ -1,0 +1,116 @@
+/* Save this as styles.css */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #000;
+  color: white;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+header {
+  background-color: #111;
+  padding: 30px 0;
+  text-align: center;
+  border-bottom: 3px solid red;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  color: red;
+}
+
+header p {
+  font-size: 1.2em;
+  color: white;
+}
+
+.packages {
+  background-color: #1a1a1a;
+}
+
+.packages h2,
+.mileage h2,
+.contact h2 {
+  color: red;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.package-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.package {
+  background-color: #222;
+  border: 1px solid red;
+  padding: 20px;
+  border-radius: 8px;
+  width: 280px;
+}
+
+.package h3 {
+  color: white;
+  border-bottom: 1px solid red;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.mileage {
+  background-color: #000;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.contact {
+  background-color: #1a1a1a;
+  padding-bottom: 40px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+button {
+  padding: 10px;
+  background-color: red;
+  border: none;
+  color: white;
+  font-size: 1.1em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #b30000;
+}
+
+footer {
+  background-color: #111;
+  text-align: center;
+  padding: 20px 0;
+  border-top: 3px solid red;
+}
