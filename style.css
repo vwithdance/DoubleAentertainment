@@ -1,62 +1,40 @@
-/* Global Layout */
+/* Global */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background-color: #0d0d0d;
   color: #f5f5f5;
   line-height: 1.6;
-  margin-left: 180px;
 }
 
-.sidebar nav {
-  display: flex;
-  flex-direction: column;
-  padding-left: 20px;
+html {
+  scroll-behavior: smooth;
 }
 
-.sidebar a {
-  color: white;
-  text-decoration: none;
-  padding: 12px 0;
-  font-size: 1.1em;
-  transition: all 0.3s ease;
-}
-
-.sidebar a:hover {
-  color: #ffd700;
-  transform: translateX(5px);
-}
-
-.main-content {
-  margin-top: 60px;
-  margin-left: 180px;
-  padding: 20px;
-}
-
-.container {
-  width: 90%;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px 0;
-}
-
-/* Header Bar */
+/* Top Header */
 .top-header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
   height: 60px;
+  width: 100%;
   background-color: #000;
   color: #ffd700;
   display: flex;
-  align-items: center;
   justify-content: center;
-  font-size: 2em;
+  align-items: center;
+  font-size: 1.8em;
   font-weight: bold;
   border-bottom: 2px solid #e50914;
   z-index: 1001;
-  letter-spacing: 1px;
+}
+
+.menu-toggle {
+  position: absolute;
+  right: 20px;
+  font-size: 1.5em;
+  cursor: pointer;
+  display: none;
 }
 
 /* Sidebar */
@@ -64,18 +42,18 @@ body {
   position: fixed;
   top: 60px;
   left: 0;
-  height: calc(100% - 60px);
   width: 180px;
+  height: calc(100% - 60px);
   background-color: #111;
   border-right: 2px solid #e50914;
-  padding-top: 30px;
+  padding-top: 20px;
   z-index: 1000;
+  transition: left 0.3s ease;
 }
 
 .sidebar nav {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   padding-left: 20px;
 }
 
@@ -92,7 +70,57 @@ body {
   transform: translateX(5px);
 }
 
-/* Bio Section */
+.sidebar-profile {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebar-profile img {
+  width: 100px;
+  border-radius: 50%;
+  border: 2px solid #ffd700;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 180px;
+  margin-top: 60px;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Responsive Sidebar */
+@media (max-width: 768px) {
+  .sidebar {
+    left: -200px;
+    width: 180px;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* Sections */
+.tagline {
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: 20px;
+}
+
 .bio {
   background: linear-gradient(to right, #1f1f1f, #0d0d0d);
   padding: 60px 0;
@@ -107,47 +135,40 @@ body {
 
 .bio p {
   font-size: 1.2em;
-  line-height: 1.8;
   max-width: 800px;
-  margin: 0 auto;
-  color: #f0f0f0;
+  margin: auto;
 }
 
-.bio img {
-  width: 160px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #e50914;
-  margin-bottom: 20px;
-}
-
-/* Packages Section */
-.packages {
-  background: radial-gradient(circle at top left, #1a1a1a, #0d0d0d);
+.packages, .mileage, .contact {
   padding: 60px 0;
 }
 
-.packages h2 {
+.packages {
+  background-color: #1a1a1a;
+}
+
+.packages h2,
+.mileage h2,
+.contact h2 {
   color: #e50914;
   text-align: center;
-  font-size: 2em;
   margin-bottom: 30px;
+  font-size: 2em;
 }
 
 .package-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 20px;
+  justify-content: center;
 }
 
 .package {
   background-color: #222;
   border: 2px solid #e50914;
   padding: 20px;
-  border-radius: 10px;
   width: 280px;
+  border-radius: 10px;
   transition: transform 0.3s ease;
 }
 
@@ -159,32 +180,7 @@ body {
 .package h3 {
   color: #ffd700;
   border-bottom: 1px solid #e50914;
-  padding-bottom: 10px;
   margin-bottom: 10px;
-}
-
-/* Mileage Section */
-.mileage {
-  background-color: #000;
-  text-align: center;
-  padding: 60px 0;
-}
-
-.mileage h2 {
-  color: #e50914;
-  margin-bottom: 20px;
-}
-
-/* Contact Section */
-.contact {
-  background-color: #1a1a1a;
-  padding: 60px 0;
-}
-
-.contact h2 {
-  color: #e50914;
-  text-align: center;
-  margin-bottom: 30px;
 }
 
 form {
@@ -192,24 +188,22 @@ form {
   flex-direction: column;
   gap: 15px;
   max-width: 600px;
-  margin: 0 auto;
+  margin: auto;
 }
 
-input,
-textarea {
+input, textarea {
   padding: 12px;
-  border: none;
   border-radius: 5px;
+  border: none;
   font-size: 1em;
 }
 
 button {
   padding: 12px;
   background-color: #e50914;
-  border: none;
   color: white;
   font-size: 1.1em;
-  cursor: pointer;
+  border: none;
   border-radius: 5px;
   transition: background 0.3s ease;
 }
@@ -218,11 +212,10 @@ button:hover {
   background-color: #b30000;
 }
 
-/* Footer */
 footer {
   background-color: #111;
   text-align: center;
   padding: 20px 0;
-  border-top: 2px solid #e50914;
   color: #aaa;
+  border-top: 2px solid #e50914;
 }
