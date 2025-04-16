@@ -8,22 +8,6 @@ body {
   margin-left: 180px;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-.sidebar {
-  position: fixed;
-  top: 60px; /* leave space for the top header */
-  left: 0;
-  width: 180px;
-  height: calc(100% - 60px);
-  background-color: #000; /* black sidebar */
-  border-right: 2px solid #ffd700; /* gold border */
-  padding-top: 30px;
-  z-index: 1000;
-}
-
 .sidebar nav {
   display: flex;
   flex-direction: column;
