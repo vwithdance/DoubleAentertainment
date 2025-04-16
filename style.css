@@ -1,85 +1,21 @@
-/* Save this as styles.css */
-/* Global & Layout */
+/* Global Layout */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #121212; /* Dark Gray */
-  color: white;
+  background-color: #0d0d0d;
+  color: #f5f5f5;
   line-height: 1.6;
-  margin-left: 180px; /* space for sidebar */
+  margin-left: 180px;
 }
 
 html {
   scroll-behavior: smooth;
-}
-/* Header (top bar) */
-.top-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 60px;
-  background-color: black;
-  color: red;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.8em;
-  font-weight: bold;
-  border-bottom: 2px solid red;
-  z-index: 1001;
-}
-
-/* Sidebar */
-.sidebar {
-  position: fixed;
-  top: 60px; /* Pushes below the top header */
-  left: 0;
-  height: calc(100% - 60px);
-  width: 180px;
-  background-color: #111;
-  border-right: 2px solid red;
-  padding-top: 30px;
-  z-index: 1000;
-}
-
-/* Sidebar nav */
-.sidebar nav {
-  display: flex;
-  flex-direction: column;
-  padding-left: 20px;
-}
-
-.sidebar a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 0;
-  font-size: 1.1em;
-  transition: color 0.3s;
-}
-
-.sidebar a:hover {
-  color: red;
-}
-
-/* Shift main content */
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #121212;
-  color: white;
-  line-height: 1.6;
 }
 
 .main-content {
-  margin-top: 60px; /* Header height */
-  margin-left: 180px; /* Sidebar width */
+  margin-top: 60px;
+  margin-left: 180px;
   padding: 20px;
-}
-
-/* Optional scroll */
-html {
-  scroll-behavior: smooth;
 }
 
 .container {
@@ -89,16 +25,35 @@ html {
   padding: 20px 0;
 }
 
-/* Sidebar */
-.sidebar {
+/* Header Bar */
+.top-header {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100%;
+  width: 100%;
+  height: 60px;
+  background-color: #000;
+  color: #ffd700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  font-weight: bold;
+  border-bottom: 2px solid #e50914;
+  z-index: 1001;
+  letter-spacing: 1px;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  height: calc(100% - 60px);
   width: 180px;
   background-color: #111;
-  border-right: 2px solid red;
-  padding-top: 40px;
+  border-right: 2px solid #e50914;
+  padding-top: 30px;
   z-index: 1000;
 }
 
@@ -112,99 +67,130 @@ html {
 .sidebar a {
   color: white;
   text-decoration: none;
-  padding: 10px 0;
+  padding: 12px 0;
   font-size: 1.1em;
-  transition: color 0.3s;
+  transition: all 0.3s ease;
 }
 
 .sidebar a:hover {
-  color: red;
+  color: #ffd700;
+  transform: translateX(5px);
 }
 
-/* Header */
-header {
-  background-color: #111;
-  padding: 30px 0;
+/* Bio Section */
+.bio {
+  background: linear-gradient(to right, #1f1f1f, #0d0d0d);
+  padding: 60px 0;
   text-align: center;
-  border-bottom: 3px solid red;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2.5em;
-  color: red;
-}
-
-header p {
-  font-size: 1.2em;
-  color: white;
-}
-
-/* Sections */
-.packages,
-.contact {
-  background-color: #1a1a1a;
-  padding: 40px 0;
-}
-
-.packages h2,
-.mileage h2,
-.contact h2 {
-  color: red;
-  text-align: center;
+.bio h2 {
+  color: #ffd700;
+  font-size: 2em;
   margin-bottom: 20px;
 }
 
-/* Packages Grid */
+.bio p {
+  font-size: 1.2em;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #f0f0f0;
+}
+
+.bio img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #e50914;
+  margin-bottom: 20px;
+}
+
+/* Packages Section */
+.packages {
+  background: radial-gradient(circle at top left, #1a1a1a, #0d0d0d);
+  padding: 60px 0;
+}
+
+.packages h2 {
+  color: #e50914;
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
 .package-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   gap: 20px;
 }
 
 .package {
   background-color: #222;
-  border: 1px solid red;
+  border: 2px solid #e50914;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 10px;
   width: 280px;
+  transition: transform 0.3s ease;
+}
+
+.package:hover {
+  transform: scale(1.05);
+  border-color: #ffd700;
 }
 
 .package h3 {
-  color: white;
-  border-bottom: 1px solid red;
+  color: #ffd700;
+  border-bottom: 1px solid #e50914;
   padding-bottom: 10px;
   margin-bottom: 10px;
 }
 
-/* Mileage */
+/* Mileage Section */
 .mileage {
   background-color: #000;
   text-align: center;
-  padding: 40px 0;
+  padding: 60px 0;
 }
 
-/* Contact Form */
+.mileage h2 {
+  color: #e50914;
+  margin-bottom: 20px;
+}
+
+/* Contact Section */
+.contact {
+  background-color: #1a1a1a;
+  padding: 60px 0;
+}
+
+.contact h2 {
+  color: #e50914;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
 form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
   max-width: 600px;
   margin: 0 auto;
 }
 
 input,
 textarea {
-  padding: 10px;
+  padding: 12px;
   border: none;
   border-radius: 5px;
   font-size: 1em;
 }
 
 button {
-  padding: 10px;
-  background-color: red;
+  padding: 12px;
+  background-color: #e50914;
   border: none;
   color: white;
   font-size: 1.1em;
@@ -222,5 +208,6 @@ footer {
   background-color: #111;
   text-align: center;
   padding: 20px 0;
-  border-top: 3px solid red;
+  border-top: 2px solid #e50914;
+  color: #aaa;
 }
