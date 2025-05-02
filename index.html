@@ -4,132 +4,90 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Double A Entertainment</title>
-  <meta name="description" content="Double A Entertainment offers professional DJ and Photography services for events." />
-  <meta name="author" content="Double A Entertainment" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Top Header -->
-  <header class="top-header">
-    <h1>Double A Entertainment</h1>
-    <button class="menu-toggle" onclick="toggleSidebar()" aria-label="Toggle menu">☰</button>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <h1>Double A Entertainment</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- Sidebar -->
-  <aside class="sidebar" id="sidebar">
-    <div class="sidebar-profile">
-      <img src="your-photo.jpg" alt="Profile Photo" onerror="this.src='placeholder.jpg'" />
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Professional DJ & Photography</h2>
+      <p>We bring the energy. We capture the moments.</p>
+      <a href="#contact" class="btn-red">Book Now</a>
     </div>
-    <nav>
-      <a href="#home">🏠 Home</a>
-      <a href="#bio">🧑‍🎤 Bio</a>
-      <a href="#packages">💼 Packages</a>
-      <a href="#mileage">⛽ Mileage</a>
-      <a href="#contact">📧 Contact</a>
-    </nav>
-  </aside>
+  </section>
 
-  <!-- Main Content -->
-  <main class="main-content">
+  <!-- ABOUT SECTION -->
+  <section id="about" class="section light">
+    <div class="container">
+      <h2>Meet Double A</h2>
+      <p>
+        At Double A Entertainment, we specialize in turning your events into unforgettable memories. Whether you're celebrating a wedding, birthday, or corporate event — we've got the beats and the shots.
+      </p>
+    </div>
+  </section>
 
-    <section id="home">
-      <div class="container">
-        <p class="tagline">Professional DJ & Photography for all your special events</p>
-      </div>
-    </section>
-
-    <section class="bio" id="bio">
-      <div class="container">
-        <h2>Meet Double A</h2>
-        <p>
-          Hey! Double A's DJ and Photography is a unique experience where we capture the good moments and help create them! We would love to attend your birthday party, wedding, corporate event, or just a fun get-together.
-        </p>
-      </div>
-    </section>
-
-    <section class="packages" id="packages">
-      <div class="container">
-        <h2>Packages</h2>
-        <div class="package-grid">
-          <div class="package">
-            <h3>DJ Services</h3>
-            <ul>
-              <li>$150/hour</li>
-              <li>Includes sound system and lighting</li>
-              <li>Custom playlists available</li>
-            </ul>
-          </div>
-          <div class="package">
-            <h3>Photography Services</h3>
-            <ul>
-              <li>$125/hour</li>
-              <li>Includes photo editing</li>
-              <li>Online gallery access</li>
-            </ul>
-          </div>
-          <div class="package">
-            <h3>Wedding Package</h3>
-            <ul>
-              <li>$1,500 full-day (up to 8 hours)</li>
-              <li>Includes DJ + Photography</li>
-              <li>One planning session included</li>
-            </ul>
-          </div>
+  <!-- SERVICES -->
+  <section id="services" class="section dark">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>🎧 DJ Services</h3>
+          <p>$150/hour. Includes sound system, lighting, and custom playlists.</p>
+        </div>
+        <div class="card">
+          <h3>📷 Photography</h3>
+          <p>$125/hour. Edited photos + online gallery included.</p>
+        </div>
+        <div class="card">
+          <h3>💍 Wedding Bundle</h3>
+          <p>$1500/day – Full coverage DJ + Photography with planning session.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="mileage" id="mileage">
-      <div class="container">
-        <h2>Mileage Policy</h2>
-        <p>
-          Travel within 50 miles of our home base is free.<br>
-          For locations beyond 50 miles, a gas/travel fee of $0.65 per mile will be added.
-        </p>
-      </div>
-    </section>
+  <!-- CONTACT FORM -->
+  <section id="contact" class="section light">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required>
 
-    <section class="contact" id="contact">
-      <div class="container">
-        <h2>Contact Us</h2>
-        <form name="contact-form" action="https://example.com/submit" method="POST">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required />
+        <label for="email">Email</label>
+        <input type="email" name="_replyto" id="email" required>
 
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
+        <label for="message">Message</label>
+        <textarea name="message" id="message" rows="5" required></textarea>
 
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
+        <button type="submit" class="btn-red">Send</button>
+      </form>
+    </div>
+  </section>
 
-          <button type="submit">Send Message</button>
-        </form>
-      </div>
-    </section>
-
-    <footer>
-      <div class="container">
-        <p>&copy; 2025 Double A Entertainment. All rights reserved.</p>
-      </div>
-    </footer>
-
-  </main>
-
-  <script>
-    function toggleSidebar() {
-      const sidebar = document.getElementById("sidebar");
-      if (sidebar) {
-        sidebar.classList.toggle("open");
-      }
-    }
-  </script>
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Double A Entertainment</p>
+  </footer>
 
 </body>
 </html>
