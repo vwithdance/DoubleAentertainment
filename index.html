@@ -4,20 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Double A Entertainment</title>
+  <meta name="description" content="Double A Entertainment offers professional DJ and Photography services for events." />
+  <meta name="author" content="Double A Entertainment" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 <body>
 
   <!-- Top Header -->
-  <div class="top-header">
+  <header class="top-header">
     <h1>Double A Entertainment</h1>
-    <div class="menu-toggle" onclick="toggleSidebar()">☰</div>
-  </div>
+    <button class="menu-toggle" onclick="toggleSidebar()" aria-label="Toggle menu">☰</button>
+  </header>
 
   <!-- Sidebar -->
-  <div class="sidebar" id="sidebar">
+  <aside class="sidebar" id="sidebar">
     <div class="sidebar-profile">
-      <img src="your-photo.jpg" alt="Profile Photo" />
+      <img src="your-photo.jpg" alt="Profile Photo" onerror="this.src='placeholder.jpg'" />
     </div>
     <nav>
       <a href="#home">🏠 Home</a>
@@ -26,10 +34,10 @@
       <a href="#mileage">⛽ Mileage</a>
       <a href="#contact">📧 Contact</a>
     </nav>
-  </div>
+  </aside>
 
   <!-- Main Content -->
-  <div class="main-content">
+  <main class="main-content">
 
     <section id="home">
       <div class="container">
@@ -41,7 +49,7 @@
       <div class="container">
         <h2>Meet Double A</h2>
         <p>
-          Hey! Double A's DJ and Photography is an unique experience where we capture the good and bring help to create it! We would love to come see your birthday party, wedding, corporate event or just a fun get together.
+          Hey! Double A's DJ and Photography is a unique experience where we capture the good moments and help create them! We would love to attend your birthday party, wedding, corporate event, or just a fun get-together.
         </p>
       </div>
     </section>
@@ -91,7 +99,7 @@
     <section class="contact" id="contact">
       <div class="container">
         <h2>Contact Us</h2>
-        <form action="mailto:doubleagrooves@gmail.com" method="POST" enctype="text/plain">
+        <form name="contact-form" action="https://example.com/submit" method="POST">
           <label for="name">Name:</label>
           <input type="text" id="name" name="name" required />
 
@@ -112,11 +120,14 @@
       </div>
     </footer>
 
-  </div>
+  </main>
 
   <script>
     function toggleSidebar() {
-      document.getElementById("sidebar").classList.toggle("open");
+      const sidebar = document.getElementById("sidebar");
+      if (sidebar) {
+        sidebar.classList.toggle("open");
+      }
     }
   </script>
 
