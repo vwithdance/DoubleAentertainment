@@ -1,72 +1,127 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Double A Entertainment</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #333;
+}
 
-  <!-- Navigation Menu -->
-  <nav class="navbar">
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+/* Navigation Menu */
+.navbar {
+  background-color: #000;
+  text-align: center;
+  padding: 10px 0;
+}
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <h1>Double A Entertainment</h1>
-      <p>Your Event, Our Passion</p>
-      <a href="#contact" class="cta-button">Book Now</a>
-    </div>
-  </section>
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Us</h2>
-    <p>We provide professional DJ and photography services for all your special events.</p>
-  </section>
+.navbar li {
+  display: inline;
+  margin: 0 15px;
+}
 
-  <!-- Services Section -->
-  <section id="services">
-    <h2>Our Services</h2>
-    <div class="service-grid">
-      <div class="service">
-        <h3>DJ Services</h3>
-        <p>$150/hour</p>
-      </div>
-      <div class="service">
-        <h3>Photography Services</h3>
-        <p>$125/hour</p>
-      </div>
-      <div class="service">
-        <h3>Wedding Package</h3>
-        <p>$1500/full day</p>
-      </div>
-    </div>
-  </section>
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+/* Hero Section */
+.hero {
+  background: url('your-image.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
 
-  <footer>
-    <p>&copy; 2025 Double A Entertainment</p>
-  </footer>
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
 
-  <script src="scripts.js"></script>
-</body>
-</html>
+.hero h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.5rem;
+}
+
+.cta-button {
+  background-color: #d32f2f;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Services Section */
+#services {
+  padding: 50px 20px;
+  background-color: #f4f4f4;
+}
+
+.service-grid {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.service {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service h3 {
+  color: #d32f2f;
+}
+
+/* Contact Section */
+#contact {
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #d32f2f;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
