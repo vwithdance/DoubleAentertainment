@@ -1,206 +1,79 @@
-/* ========== GENERAL STYLES ========== */
-* {
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Double A Entertainment | Booking</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo">Double A Entertainment</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#booking">Booking</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #fff;
-  color: #333;
-  line-height: 1.6;
-}
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Book Your Next Event With Us</h1>
+      <p>Professional DJs, lighting, and entertainment for every occasion.</p>
+      <a href="#booking" class="cta-button">Book Now</a>
+    </div>
+  </section>
 
-/* ========== NAVIGATION MENU ========== */
-.navbar {
-  background-color: #000;
-  padding: 15px 0;
-}
+  <!-- Services Section -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+      <div class="service">
+        <h3>DJ Packages</h3>
+        <p>Top-tier sound and lighting setups for all event sizes.</p>
+      </div>
+      <div class="service">
+        <h3>Event Coordination</h3>
+        <p>We plan and manage every detail for a flawless experience.</p>
+      </div>
+      <div class="service">
+        <h3>Custom Experiences</h3>
+        <p>Tailored entertainment solutions for weddings, parties, and more.</p>
+      </div>
+    </div>
+  </section>
 
-.navbar ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-  gap: 20px;
-}
+  <!-- Booking Form -->
+  <section id="booking">
+    <h2>Book an Event</h2>
+    <form action="#" method="post">
+      <input type="text" name="name" placeholder="Full Name" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <input type="tel" name="phone" placeholder="Phone Number" />
+      <input type="date" name="event-date" required />
+      <textarea name="details" placeholder="Tell us about your event..." rows="5"></textarea>
+      <button type="submit">Submit Booking Request</button>
+    </form>
+  </section>
 
-.navbar a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: info@doubleaentertainment.com</p>
+    <p>Phone: (555) 123-4567</p>
+    <div class="socials">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">YouTube</a>
+    </div>
+  </section>
 
-.navbar a:hover {
-  color: #d32f2f;
-}
-
-/* ========== HERO SECTION ========== */
-.hero {
-  background: url('your-image.jpg') no-repeat center center/cover;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #fff;
-  padding: 0 20px;
-  position: relative;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 700px;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 15px;
-}
-
-.hero p {
-  font-size: 1.25rem;
-  margin-bottom: 20px;
-}
-
-.cta-button {
-  background-color: #d32f2f;
-  color: #fff;
-  padding: 12px 25px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #b71c1c;
-}
-
-/* ========== SERVICES SECTION ========== */
-#services {
-  padding: 80px 20px;
-  background-color: #f4f4f4;
-  text-align: center;
-}
-
-#services h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: #222;
-}
-
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.service {
-  background-color: #fff;
-  padding: 30px 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.service:hover {
-  transform: translateY(-5px);
-}
-
-.service h3 {
-  color: #d32f2f;
-  margin-bottom: 10px;
-}
-
-/* ========== CONTACT SECTION ========== */
-#contact {
-  padding: 80px 20px;
-  background-color: #fff;
-  text-align: center;
-}
-
-#contact h2 {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-}
-
-form {
-  max-width: 600px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-input,
-textarea {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-button {
-  background-color: #d32f2f;
-  color: #fff;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-button:hover {
-  background-color: #b71c1c;
-}
-
-/* ========== FOOTER ========== */
-footer {
-  background-color: #000;
-  color: #fff;
-  text-align: center;
-  padding: 15px 10px;
-  font-size: 0.9rem;
-}
-
-/* ========== RESPONSIVE FIXES ========== */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero p {
-    font-size: 1.1rem;
-  }
-
-  .navbar ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .service-grid {
-    grid-template-columns: 1fr;
-  }
-}
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Double A Entertainment. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
