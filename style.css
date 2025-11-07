@@ -1,29 +1,44 @@
-/* ========== GENERAL STYLES ========== */
+/* ========== GLOBAL ========== */
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Arial', sans-serif;
   margin: 0;
-  padding: 0;
-  background-color: #fff;
+  font-family: 'Arial', sans-serif;
   color: #333;
+  background: #fff;
   line-height: 1.6;
 }
 
-/* ========== NAVIGATION ========== */
+h1, h2, h3 {
+  margin: 0 0 15px;
+}
+
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* ========== NAVBAR ========== */
 .navbar {
   background-color: #000;
-  padding: 15px 0;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.3rem;
 }
 
 .navbar ul {
   list-style: none;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   gap: 25px;
@@ -40,17 +55,16 @@ body {
   color: #d32f2f;
 }
 
-/* ========== HERO SECTION ========== */
+/* ========== HERO ========== */
 .hero {
-  background: url('your-image.jpg') no-repeat center center/cover;
-  height: 100vh;
+  background: url('hero-image.jpg') no-repeat center center/cover;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  color: #fff;
-  padding: 0 20px;
   position: relative;
+  color: #fff;
+  text-align: center;
 }
 
 .hero::before {
@@ -64,16 +78,7 @@ body {
   position: relative;
   z-index: 1;
   max-width: 700px;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 15px;
-}
-
-.hero p {
-  font-size: 1.25rem;
-  margin-bottom: 25px;
+  padding: 20px;
 }
 
 .cta-button {
@@ -90,19 +95,120 @@ body {
   background-color: #b71c1c;
 }
 
-/* ========== SERVICES SECTION ========== */
+/* ========== SERVICES ========== */
 #services {
   background-color: #f4f4f4;
-  padding: 80px 20px;
-  text-align: center;
-}
-
-#services h2 {
-  font-size: 2.5rem;
-  color: #222;
-  margin-bottom: 40px;
 }
 
 .service-grid {
   display: grid;
-  grid-
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.service {
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.service:hover {
+  transform: translateY(-5px);
+}
+
+.service h3 {
+  color: #d32f2f;
+}
+
+/* ========== BOOKING FORM ========== */
+#booking {
+  background: #fff;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input,
+textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #d32f2f;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #b71c1c;
+}
+
+/* ========== CONTACT ========== */
+#contact {
+  background-color: #f4f4f4;
+}
+
+.socials {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.socials a {
+  color: #d32f2f;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.socials a:hover {
+  color: #b71c1c;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 0.9rem;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+}
